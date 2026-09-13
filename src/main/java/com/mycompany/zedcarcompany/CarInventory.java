@@ -21,10 +21,13 @@ public class CarInventory {
   }
   
   
-  public vehicles findBType (vehicles type ) throws InvalidCarTypeException{
-    for (vehicles c : theCars){
+  public CarVehicles findMatch (CarType type, Engine engineSize, InjectorType injectorType ) throws InvalidCarTypeException{
+    for (CarVehicles c : vehicles){
         
-        if (c.getCarType()== type){
+        if (c.getcartype()== type &&
+                c.getengineSize() == engineSize
+                && c.getInjectorType() == injectorType){
+            
             return c;
         }
         

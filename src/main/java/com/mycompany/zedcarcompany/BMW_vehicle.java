@@ -20,6 +20,6 @@ public class BMW_vehicle extends CarVehicles{
     
     @Override
     public double getPrice(){
-        return getCarStatus().equalsIgnoreCase("Used");
+        if (getCarStatus().equalsIgnoreCase("Used"));
     }
 }

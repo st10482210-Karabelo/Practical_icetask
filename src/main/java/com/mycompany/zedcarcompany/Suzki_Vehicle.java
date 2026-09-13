@@ -8,7 +8,7 @@
  * @author karab
  */
 public class Suzki_Vehicle extends CarVehicles{
-    public Suzki_Vehicle(String modelYear; 
+    public Suzki_Vehicle(String modelYear, 
             int engineSize,
             String injectorType,
             String carStatus)
@@ -21,6 +21,6 @@ public class Suzki_Vehicle extends CarVehicles{
     
     @Override 
     public double getPrice(){
-        return getCarStatus().equalIgnoreCase("Used");
+        if (getCarStatus().equalIgnoreCase("Used"));
     }
 }

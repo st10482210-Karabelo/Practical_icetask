@@ -9,7 +9,7 @@ package com.mycompany.zedcarcompany;
  *
  * @author karab
  */
-public class CarVehicles {
+public abstract class CarVehicles {
     private String modelYear;
     private int engineSize;
     private String injectorType;
@@ -49,11 +49,12 @@ public class CarVehicles {
     }
     
     public CarType setcarType ( CarType cartypes){
-        carType = cartypes ;
+        this.cartype = cartypes ;
+        return null;
     }
     
     public CarType getcarType(){
-        return carType;
+        return cartype;
     }
     
     public abstract double getPrcice();
@@ -62,11 +63,11 @@ public class CarVehicles {
     @Override 
     public String toString(){
         System.out.println("The car model was made in:" + modelYear + 
-                "\nThe Car type is" + carType + "The engine szie of the veicle is:" + engineSize+
+                "\nThe Car type is" + cartype + "The engine szie of the veicle is:" + engineSize+
                 "\nInjector type of the  vehicle is:" + injectorType +
                 "\nThe status of teh vehicle stands at: " + carStatus);
         
-        return carType;
+        return cartype;
     }
     
 }
