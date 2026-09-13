@@ -4,13 +4,10 @@
 
 package com.mycompany.zedcarcompany;
 
-/**
- *
- * @author karab
- */
+
 public class ZedCarCompany {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+
     }
 }
