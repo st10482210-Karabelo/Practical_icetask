@@ -11,7 +11,36 @@ public class CarInventory {
     
   ArrayList<CarVehicles> vehicles = new ArrayList<>(); 
   
-  vehicles.add("Mercedes");
+  public CarInventory(){
+      vehicles.add("Mercedes");
+  display(vehicles);
   vehicles.add("BMW");
+  display(vehicles);
   vehicles.add("Suzki");
+  display(vehicles);
+  }
+  
+  
+  public vehicles findBType (vehicles type ) throws InvalidCarTypeException{
+    for (vehicles c : theCars){
+        
+        if (c.getCarType()== type){
+            return c;
+        }
+        
+    } 
+    
+    throw new InvalidCarTypeException("No car found for type" + type);
 }
+  public ArrayList<vehicles> getVehicles(){
+      return vehicles;
+  }
+  
+  public void display(){
+      System.out.println("The size of this list of vehicles is " + vehicles.size());
+      System.out.println(vehicles);
+  }
+}
+
+
+

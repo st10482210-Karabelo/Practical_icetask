@@ -56,9 +56,15 @@ public class CarVehicles {
         return carType;
     }
     
+    public abstract double getPrcice();
+    // the abstract method used in the subclass that will act as polymorphsim in teh pricing logic
+    
     @Override 
     public String toString(){
-        System.out.println("The car model was made in:" + modelYear);
+        System.out.println("The car model was made in:" + modelYear + 
+                "\nThe Car type is" + carType + "The engine szie of the veicle is:" + engineSize+
+                "\nInjector type of the  vehicle is:" + injectorType +
+                "\nThe status of teh vehicle stands at: " + carStatus);
         
         return carType;
     }
