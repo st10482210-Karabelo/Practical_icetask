@@ -1,3 +1,5 @@
+package com.mycompany.zedcarcompany;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
@@ -7,8 +9,7 @@
  *
  * @author karab
  */
-public class InvalidCarTypeException extends Exception {
-    public InvalidCarTypeException(String Message){
-        super(Message);
-    }
+public enum EngineSize {
+    FOUR_Wheel,
+     Six_Wheel;       
 }

@@ -4,6 +4,7 @@
 
 package com.mycompany.zedcarcompany;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 public class ZedCarCompany {
 
@@ -38,12 +39,12 @@ public class ZedCarCompany {
             
             EngineSize theengine;
             switch (choiceofengine){
-                case 1: engine = EngineSize.FOUR_Wheel;
+                case 1: theengine = EngineSize.FOUR_Wheel;
                 break;
-                case 2: engine = EngineSize.Six_Wheel;
+                case 2: theengine = EngineSize.Six_Wheel;
                 break;
                 
-                default: throw new InvalidCarTypeException("Invalid engine size" + theengine);
+                default: throw new InvalidCarTypeException("Invalid engine size" + choiceofengine);
                 
                 
                
@@ -60,16 +61,16 @@ public class ZedCarCompany {
                
             }
             
-            Car Found = inventory.findMatch(type,theengine , injector );
-            System.out.println(found);
+            CarVehicles Found = theZedCarComp.findMatch(type,theengine , injector );
+            System.out.println(Found);
         }
         catch(InvalidCarTypeException e){
-            System.out.println("Error:" + e.getMessage());
+            System.out.println("Error: please enter a whole number for each menu choice.");
         }
         finally{
             carchoice.close();
         }
         
-          
+    }
     
 }
